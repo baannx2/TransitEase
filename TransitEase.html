@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TransitEase</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+:root{
+  --bg:#020617;
+  --card:#0f172a;
+  --card2:#111c34;
+  --primary:#38bdf8;
+  --primary2:#0ea5e9;
+  --text:#f8fafc;
+  --muted:#94a3b8;
+  --border:rgba(255,255,255,0.06);
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+/* HEADER */
+header{
+  width:100%;
+  padding:18px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid var(--border);
+  background:rgba(2,6,23,0.92);
+  backdrop-filter:blur(10px);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:700;
+  color:var(--primary);
+}
+
+nav{
+  display:flex;
+  gap:22px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#cbd5e1;
+  font-size:14px;
+  transition:0.2s;
+}
+
+nav a:hover{
+  color:white;
+}
+
+/* HERO SECTION */
+.hero{
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:80px 7%;
+  gap:50px;
+}
+
+.hero-text{
+  flex:1;
+}
+
+.hero-text h1{
+  font-size:58px;
+  line-height:1.1;
+  margin-bottom:20px;
+}
+
+.hero-text h1 span{
+  color:var(--primary);
+}
+
+.hero-text p{
+  color:#cbd5e1;
+  line-height:1.8;
+  margin-bottom:30px;
+  max-width:550px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:16px;
+}
+
+.btn{
+  padding:14px 22px;
+  border-radius:12px;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+  transition:0.2s;
+}
+
+.primary-btn{
+  background:var(--primary);
+  color:#001018;
+}
+
+.primary-btn:hover{
+  background:var(--primary2);
+}
+
+.secondary-btn{
+  border:1px solid rgba(255,255,255,0.1);
+  color:white;
+}
+
+.secondary-btn:hover{
+  background:rgba(255,255,255,0.05);
+}
+
+/* HERO CARD */
+.hero-card{
+  flex:1;
+  background:linear-gradient(145deg,#0f172a,#111827);
+  border:1px solid var(--border);
+  border-radius:24px;
+  padding:30px;
+  box-shadow:0 0 40px rgba(56,189,248,0.08);
+}
+
+.route-box{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.05);
+  padding:16px;
+  border-radius:14px;
+  margin-bottom:16px;
+}
+
+.route-box h4{
+  color:var(--primary);
+  margin-bottom:6px;
+}
+
+.route-box p{
+  color:#cbd5e1;
+  font-size:14px;
+}
+
+/* FEATURES */
+.features{
+  width:90%;
+  max-width:1200px;
+  margin:0 auto 80px auto;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.section-title h2{
+  font-size:36px;
+  margin-bottom:10px;
+}
+
+.section-title p{
+  color:var(--muted);
+}
+
+<body>
+
+<header>
+...
+</header>
+
+<section class="hero">
+...
+</section>
+
+<!-- PUT THE FARE CALCULATOR CODE HERE -->
+<!-- PASTE IT HERE -->
+
+<section class="features">
+...
+</section>
+
+<footer>
+...
+</footer>
+
+</body>
+
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:22px;
+}
+
+.feature-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:24px;
+  transition:0.25s;
+}
+
+.feature-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(56,189,248,0.3);
+}
+
+.feature-card h3{
+  margin-bottom:12px;
+  color:var(--primary);
+}
+
+.feature-card p{
+  color:#cbd5e1;
+  line-height:1.7;
+  font-size:14px;
+}
+
+/* STATS */
+.stats{
+  width:90%;
+  max-width:1100px;
+  margin:0 auto 90px auto;
+
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.stat-card{
+  background:linear-gradient(145deg,#0f172a,#111827);
+  border:1px solid var(--border);
+  padding:28px;
+  border-radius:20px;
+  text-align:center;
+}
+
+.stat-card h2{
+  font-size:42px;
+  color:var(--primary);
+  margin-bottom:10px;
+}
+
+.stat-card p{
+  color:#cbd5e1;
+}
+
+/* ABOUT */
+.about{
+  width:90%;
+  max-width:1100px;
+  margin:0 auto 90px auto;
+
+  background:var(--card2);
+  border:1px solid var(--border);
+  border-radius:24px;
+  padding:40px;
+}
+
+.about h2{
+  margin-bottom:16px;
+  color:var(--primary);
+}
+
+.about p{
+  color:#cbd5e1;
+  line-height:1.9;
+}
+
+/* EMERGENCY */
+.emergency{
+  width:90%;
+  max-width:1000px;
+  margin:0 auto 90px auto;
+
+  background:rgba(239,68,68,0.08);
+  border:1px solid rgba(239,68,68,0.35);
+  border-radius:20px;
+
+  padding:30px;
+  text-align:center;
+}
+
+.emergency h2{
+  color:#ef4444;
+  margin-bottom:10px;
+}
+
+.emergency p{
+  color:#fecaca;
+  margin-bottom:20px;
+}
+
+.emergency a{
+  display:inline-block;
+  padding:12px 20px;
+  border-radius:12px;
+  background:#ef4444;
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* FOOTER */
+footer{
+  margin-top:50px;
+  border-top:1px solid var(--border);
+  padding:25px;
+  text-align:center;
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+  .hero{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .hero-text h1{
+    font-size:42px;
+  }
+
+  .hero-buttons{
+    justify-content:center;
+  }
+
+  nav{
+    display:none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">TransitEase</div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Routes</a>
+    <a href="#">Fare</a>
+    <a href="#">Map</a>
+    <a href="#">About</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+  <div class="hero-text">
+    <h1>Smart Travel With <span>TransitEase</span></h1>
+
+    <p>
+      TransitEase helps commuters navigate transportation easier with
+      smart route suggestions, fare estimation, transport tracking,
+      and accessibility support for everyone.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#" class="btn primary-btn">Get Started</a>
+      <a href="#features" class="btn secondary-btn">Explore Features</a>
+    </div>
+  </div>
+
+  <div class="hero-card">
+
+    <div class="route-box">
+      <h4>🚍 Route Finder</h4>
+      <p>Find the fastest and most efficient commute routes instantly.</p>
+    </div>
+
+    <div class="route-box">
+      <h4>💸 Fare Calculator</h4>
+      <p>Estimate transportation costs before starting your trip.</p>
+    </div>
+
+    <div class="route-box">
+      <h4>📍 Live Navigation</h4>
+      <p>Navigate terminals, stops, and nearby transport stations easily.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+
+  <div class="section-title">
+    <h2>TransitEase Features</h2>
+    <p>Designed for faster, smarter, and safer commuting.</p>
+  </div>
+
+  <div class="feature-grid">
+
+    <div class="feature-card">
+      <h3>🗺 Smart Route Planning</h3>
+      <p>
+        Get optimized transportation routes with less hassle and better travel efficiency.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <h3>💰 Fare Estimation</h3>
+      <p>
+        Calculate commuting expenses quickly to help commuters prepare exact fares.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <h3>📍 Nearby Stops</h3>
+      <p>
+        Detect nearby terminals and transportation stations around your location.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <h3>♿ Accessibility Support</h3>
+      <p>
+        Inclusive transportation support for all commuters and passengers.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- STATS -->
+<section class="stats">
+
+  <div class="stat-card">
+    <h2>50K+</h2>
+    <p>Daily Commuters</p>
+  </div>
+
+  <div class="stat-card">
+    <h2>120+</h2>
+    <p>Transport Routes</p>
+  </div>
+
+  <div class="stat-card">
+    <h2>24/7</h2>
+    <p>Navigation Support</p>
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <h2>About TransitEase</h2>
+
+  <p>
+    TransitEase is a smart urban mobility platform designed to simplify commuting.
+    It supports SDG 11 by promoting sustainable transportation systems,
+    reducing commuter confusion, and improving travel accessibility.
+    The system aims to provide commuters with organized transport information,
+    safer travel guidance, and efficient urban mobility solutions.
+  </p>
+</section>
+
+<!-- EMERGENCY -->
+<section class="emergency">
+
+  <h2>🚨 Emergency Assistance</h2>
+
+  <p>
+    If you experience unsafe situations, accidents, or emergencies during travel,
+    contact emergency services immediately.
+  </p>
+
+  <a href="tel:911">Call PH Emergency 911</a>
+
+</section>
+
+<footer>
+  © 2026 TransitEase | Smart Urban Mobility System
+</footer>
+
+</body>
+</html>
+```
+
+## How To Run In VS Code
+
+1. Open VS Code
+2. Create a folder named `TransitEase`
+3. Create a file named `index.html`
+4. Paste the code
+5. Install the `Live Server` extension in VS Code
+6. Right click `index.html`
+7. Click `Open with Live Server`
